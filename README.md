@@ -9,8 +9,8 @@
 
 ## Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [Repo link](https://github.com/minalfatih/bonsai-page)
+- Live Site URL: [Live link](https://minalfatih.github.io/bonsai-page/)
 
 ### Built with
 
