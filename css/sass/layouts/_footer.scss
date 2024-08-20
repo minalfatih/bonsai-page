@@ -1,0 +1,25 @@
+/* start footer*/
+footer {
+  .container {
+    .links {
+      p {
+        color: $dark-blue-color;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      a {
+        display: block;
+        color: $dark-blue-color;
+        padding: 6px 0;
+        @include transition;
+        &:hover {
+          color: $green-color;
+        }
+      }
+      #text {
+        color: $green-color;
+      }
+    }
+  }
+}
+/* end footer*/

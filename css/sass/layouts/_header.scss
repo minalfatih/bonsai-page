@@ -1,0 +1,51 @@
+/* start header*/
+header {
+  .navbar {
+    .container {
+      .navbar-brand {
+        span {
+          color: $green-color;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+      }
+      .navbar-collapse {
+        ul {
+          .nav-item {
+            .nav-link {
+              color: $dark-blue-color;
+              padding: 10px 20px;
+              @include transition;
+              &:hover {
+                color: $green-color;
+              }
+            }
+            .login {
+              color: $green-color;
+              border: 1px solid $green-color;
+              border-radius: $rounded;
+              padding: 6px 20px;
+              text-transform: uppercase;
+              font: {
+                weight: 500;
+                size: 0.9rem;
+              }
+            }
+            .start {
+              background-color: $green-color;
+              color: $white-color;
+              border-radius: $rounded;
+              text-transform: uppercase;
+              padding: 7px 30px;
+              font: {
+                weight: 500;
+                size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* end header*/
