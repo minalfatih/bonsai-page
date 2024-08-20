@@ -1,0 +1,242 @@
+/* start landing */
+.landing {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: 0;
+    @include opacity($green-color, 0.1);
+    width: 600px;
+    height: 100vh;
+    z-index: -1;
+    transform: rotate(-35deg);
+  }
+  .container {
+    .info {
+      h1 {
+        color: $dark-blue-color;
+        font-family: serif;
+        margin: 0;
+      }
+      .toggle {
+        span {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: $dark-blue-color;
+        }
+        .btn {
+          border: none;
+          background-color: $green-color;
+          width: 50px;
+          height: 30px;
+          border-radius: 50px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 1px;
+            background-color: $white-color;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            @include transition;
+          }
+          &.active::before {
+            left: 23px;
+          }
+        }
+      }
+    }
+    > .row {
+      > div {
+        background-color: $white-color;
+        border: 1px solid #eee;
+        border-radius: $rounded;
+        box-shadow: 0 0 25px 0 #eee;
+        p {
+          color: $dark-blue-color;
+          font-weight: 500;
+          font-size: 1.3rem;
+          margin: 0;
+        }
+        .price {
+          color: $dark-blue-color;
+          padding-bottom: 20px;
+          border-bottom: 3px solid $green-color;
+          sub,
+          sup {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+          }
+          span {
+            font-size: 3rem;
+            font-weight: 600;
+          }
+        }
+        ul {
+          margin: 25px 0;
+          li {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 10px;
+            position: relative;
+            &#new::after {
+              content: "New";
+              position: absolute;
+              right: -3%;
+              background-color: $yellow-color;
+              color: $white-color;
+              padding: 2px 4px;
+              border-radius: $rounded;
+              font-size: 0.8rem;
+              @include md {
+                @media (min-width: $screen-md-min) {
+                  right: 15%;
+                }
+              }
+            }
+            span {
+              display: block;
+              padding: 8px 0;
+              color: $dark-blue-color;
+            }
+            svg {
+              font-size: 0.9rem;
+              color: $green-color;
+            }
+          }
+        }
+        button {
+          width: 100%;
+        }
+      }
+      .workflow-plus {
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "Most Popular";
+          background-color: $green-color;
+          color: $white-color;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 500;
+          position: absolute;
+          top: 6%;
+          right: -15%;
+          transform: rotate(45deg);
+          width: 250px;
+          padding: 10px;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+/* end landing*/
+
+/* start charge*/
+.charge {
+  .container {
+    color: $dark-blue-color;
+    h1 {
+      font-family: serif;
+    }
+    .charge-boxs {
+      .box {
+        background-color: $white-color;
+        border-radius: $rounded;
+        box-shadow: 0 0 30px 10px #eee;
+        p {
+          font-weight: 500;
+        }
+        a {
+          display: block;
+          color: $green-color;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          font-weight: 500;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+/* end charge*/
+
+/* start start*/
+.start {
+  .container {
+    @include opacity($green-color, 0.1);
+    border-radius: $rounded;
+    @include lg {
+      @media (min-width: $screen-lg-min) {
+        width: 80%;
+      }
+    }
+    h1 {
+      color: $dark-blue-color;
+      font-weight: 500;
+      font-family: serif;
+      font-size: 2rem;
+      text-align: center;
+      @include lg {
+        @media (min-width: $screen-lg-min) {
+          font-size: 2.5rem;
+          width: 45%;
+          text-align: left;
+        }
+      }
+      span {
+        color: $green-color;
+      }
+    }
+    button {
+      width: 160px;
+    }
+  }
+}
+/* end start*/
+
+/* start questions */
+.questions {
+  .container {
+    @include md {
+      @media (min-width: $screen-md-min) {
+        width: 65%;
+      }
+    }
+    h1 {
+      color: $green-color;
+    }
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          display: block;
+          color: $dark-blue-color;
+          font-size: 1.3rem;
+          font-weight: 400;
+          padding: 8px 0;
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            color: $green-color;
+          }
+        }
+        svg {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+/* end questions */
